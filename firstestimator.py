@@ -1,11 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# Tensorflow DNNRegressor in Python
-# CC-BY-2.0 Paul Balzer
-# see: http://www.cbcity.de/deep-learning-tensorflow-dnnregressor-einfach-erklaert
-#
-TRAINING = False
+
 WITHPLOT = True
 
 # Import Stuff
@@ -42,14 +35,6 @@ y_train = np.loadtxt('Y_train.csv', delimiter=',')
 y_dev = np.loadtxt('Y_dev.csv', delimiter=',')
 y_test = np.loadtxt('Y_test.csv', delimiter=',')
 
-
-# In[3]:
-
-
-
-
-
-# In[4]:
 
 
 print ("number of training examples = " + str(X_train.shape[1]))
