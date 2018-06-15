@@ -2,7 +2,7 @@
 """
 Created on Sat May 19 05:58:53 2018
 
-@author: Helat
+@author: Hetal
 """
 
 #!/usr/bin/env python
@@ -42,21 +42,12 @@ logging.info('Tensorflow %s' % tf.__version__) # 1.4.1
 
 
 
-X_train = np.loadtxt('X_train.csv', delimiter=',')
-X_dev = np.loadtxt('X_dev.csv',delimiter=',')
-X_test = np.loadtxt('X_test.csv',delimiter=',')
-y_train = np.loadtxt('Y_train.csv', delimiter=',')
-Y_dev = np.loadtxt('Y_dev.csv', delimiter=',')
-y_test = np.loadtxt('Y_test.csv', delimiter=',')
-
-
-# In[3]:
-
-
-
-
-
-# In[4]:
+X_train = np.loadtxt('X_trainbd.csv', delimiter=',')
+X_dev = np.loadtxt('X_devbd.csv',delimiter=',')
+X_test = np.loadtxt('X_testbd.csv',delimiter=',')
+y_train = np.loadtxt('Y_trainbd.csv', delimiter=',')
+Y_dev = np.loadtxt('Y_devbd.csv', delimiter=',')
+y_test = np.loadtxt('Y_testbd.csv', delimiter=',')
 
 
 print ("number of training examples = " + str(X_train.shape[1]))
@@ -102,28 +93,19 @@ BATCH_SIZE = 100
 hidden_layers = [16, 16, 16, 16, 16]
 dropout = 0.1
 
-
-
 #logging.info('Saving to %s' % MODEL_PATH)
 
 # Validation and Test Configuration
 validation_metrics = {"MSE": tf.contrib.metrics.streaming_mean_squared_error}
 
-#test_config = skflow.RunConfig(save_checkpoints_steps=100,
-#				save_checkpoints_secs=None)
-
 # Building the Network
 regressor = skflow.LinearRegressor(feature_columns=feature_columns,
 				label_dimension=1,
 				#hidden_units=hidden_layers,
-				
 				#dropout=dropout,
 				)
 
 # Train it
-
-
-
 		# Fit the DNNRegressor (This is where the magic happens!!!)
 regressor.fit(input_fn=training_input_fn())
 		# Thats it -----------------------------
