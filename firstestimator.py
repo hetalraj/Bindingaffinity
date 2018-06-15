@@ -28,12 +28,12 @@ logging.info('Tensorflow %s' % tf.__version__) # 1.4.1
 
 
 
-X_train = np.loadtxt('X_train.csv', delimiter=',')
-X_dev = np.loadtxt('X_dev.csv',delimiter=',')
-X_test = np.loadtxt('X_test.csv',delimiter=',')
-y_train = np.loadtxt('Y_train.csv', delimiter=',')
-y_dev = np.loadtxt('Y_dev.csv', delimiter=',')
-y_test = np.loadtxt('Y_test.csv', delimiter=',')
+X_train = np.loadtxt('X_trainbd.csv', delimiter=',')
+X_dev = np.loadtxt('X_devbd.csv',delimiter=',')
+X_test = np.loadtxt('X_testbd.csv',delimiter=',')
+y_train = np.loadtxt('Y_trainbd.csv', delimiter=',')
+y_dev = np.loadtxt('Y_devbd.csv', delimiter=',')
+y_test = np.loadtxt('Y_testbd.csv', delimiter=',')
 
 
 
